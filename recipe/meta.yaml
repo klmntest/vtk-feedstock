@@ -21,18 +21,16 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - python  {{ python }}
-    - pkgconfig             # [unix]
     - ninja
     - cmake >=3.6
     - git
-    - setuptools            # [win]
   host:
     - future
     - python {{ python }}
     - hdf5 1.8.18|1.8.18.*  # [unix]
     - zlib 1.2.*
-    - setuptools            # [win]
-    - pkgconfig             # [unix]
+    - setuptools
+    - pkgconfig
     - mesa                  # [linux]
 
   run:
