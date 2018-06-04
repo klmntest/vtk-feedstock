@@ -32,3 +32,13 @@ if errorlevel 1 exit 1
 
 ninja install
 if errorlevel 1 exit 1
+
+REM write a dummy egg-info file so that
+REM     > pkg_resources.require('vtk')
+REM will work and mayavi / traits can import vtk
+set egg_info_fname=%PKG_NAME%-%PKG_VERSION%-py%PY_VER%.egg-info
+IF NOT EXIST %egg_info_fname% (
+  ECHO Metadata-Version: 1.1>>%egg_info_fname%
+  ECHO Name: ${PKG_NAME}>>%egg_info_fname%
+  ECHO Version: ${PKG_VER}>>%egg_info_fname%
+)

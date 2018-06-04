@@ -11,10 +11,13 @@ build:
   number: 1
   features:
     - vc14                 # [win and (py35 or py36)]
+    - mesalib              # [VTK_WITH_OSMESA]
   skip_compile_pyc:
     - "*/*.py"
   skip:
     - True                 # [win and py27]
+    - True                 # [win]
+    - True                 # [linux]
 
 requirements:
   build:
@@ -31,7 +34,7 @@ requirements:
     - zlib 1.2.*
     - setuptools
     - pkgconfig
-    - mesa                  # [linux]
+    - mesalib               # [VTK_WITH_OSMESA]
 
   run:
     - python  {{ python }}
@@ -40,7 +43,7 @@ requirements:
     - numpy <=1.13
     - pillow
     - zlib 1.2.*
-    - mesa                  # [linux]
+    - mesalib               # [VTK_WITH_OSMESA]
 
 test:
   requires:

@@ -1,6 +1,6 @@
 #!/bin/bash
 mkdir build
-cd build 
+cd build
 
 if [ "$(uname -s)" == "Linux" ]; then
   DYNAMIC_EXT="so"
@@ -11,7 +11,7 @@ if [ "$(uname -s)" == "Linux" ]; then
 fi
 
 if [ "$(uname -s)" == "Darwin" ]; then
-  DYNAMIC_EXT="dylib" 
+  DYNAMIC_EXT="dylib"
   SCREEN_ARGS=(
       "-DVTK_USE_X:BOOL=OFF"
       "-DVTK_USE_COCOA:BOOL=ON"
@@ -55,3 +55,13 @@ cmake -LAH -G "Ninja" .. \
   ${SCREEN_ARGS[@]}
 
 ninja install
+
+# write a dummy egg-info file so that
+#     > pkg_resources.require('vtk')
+# will work and mayavi / traits can import vtk
+egg_info_fname="${PKG_NAME}-${PKG_VERSION}-py${PY_VER}.egg-info"
+if [ ! -f "${egg_info_fname}" ]; then
+  echo "Metadata-Version: 1.1" >> "${egg_info_fname}"
+  echo "Name: ${PKG_NAME}" >> "${egg_info_fname}"
+  echo "Version: ${PKG_VER}" >> "${egg_info_fname}"
+fi

@@ -1,5 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
+VTK_WITH_OSMESA:
+- 'False'
 c_compiler:
 - toolchain_c
 cxx_compiler:

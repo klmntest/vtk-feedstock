@@ -10,7 +10,7 @@ vtk_md5:
 python:
   - 2.7
   - 3.5
-  - 3.6 
+  - 3.6
 
 c_compiler:
   - vs2015           # [win and (py36 or py35)]
@@ -20,3 +20,7 @@ cxx_compiler:
 
 CONDA_BUILD_SYSROOT:
   - $HOME/MacOSX-SDKs/MacOSX10.9.sdk   # [osx]
+
+VTK_WITH_OSMESA:
+- False
+- True            # [linux]
