@@ -15,27 +15,27 @@ Summary: The Visualization Toolkit (VTK) is an open-source, freely available sof
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/kmmtest/vtk-feedstock/master.svg?label=Linux)](https://circleci.com/gh/kmmtest/vtk-feedstock)
-[![OSX](https://img.shields.io/travis/kmmtest/vtk-feedstock/master.svg?label=macOS)](https://travis-ci.org/kmmtest/vtk-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/kmmtest/vtk-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/kmmtest/vtk-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/klmntest/vtk-feedstock/master.svg?label=Linux)](https://circleci.com/gh/klmntest/vtk-feedstock)
+[![OSX](https://img.shields.io/travis/klmntest/vtk-feedstock/master.svg?label=macOS)](https://travis-ci.org/klmntest/vtk-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/klmntest/vtk-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/klmntest/vtk-feedstock/branch/master)
 
 Current release info
 ====================
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-vtk-green.svg)](https://anaconda.org/kmmtest/vtk) | [![Conda Downloads](https://img.shields.io/conda/dn/kmmtest/vtk.svg)](https://anaconda.org/kmmtest/vtk) | [![Conda Version](https://img.shields.io/conda/vn/kmmtest/vtk.svg)](https://anaconda.org/kmmtest/vtk) | [![Conda Platforms](https://img.shields.io/conda/pn/kmmtest/vtk.svg)](https://anaconda.org/kmmtest/vtk) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-vtk-green.svg)](https://anaconda.org/klmntest/vtk) | [![Conda Downloads](https://img.shields.io/conda/dn/klmntest/vtk.svg)](https://anaconda.org/klmntest/vtk) | [![Conda Version](https://img.shields.io/conda/vn/klmntest/vtk.svg)](https://anaconda.org/klmntest/vtk) | [![Conda Platforms](https://img.shields.io/conda/pn/klmntest/vtk.svg)](https://anaconda.org/klmntest/vtk) |
 
 Installing vtk
 ==============
 
-Installing `vtk` from the `kmmtest` channel can be achieved by adding `kmmtest` to your channels with:
+Installing `vtk` from the `klmntest` channel can be achieved by adding `klmntest` to your channels with:
 
 ```
-conda config --add channels kmmtest
+conda config --add channels klmntest
 ```
 
-Once the `kmmtest` channel has been enabled, `vtk` can be installed with:
+Once the `klmntest` channel has been enabled, `vtk` can be installed with:
 
 ```
 conda install vtk
@@ -44,7 +44,7 @@ conda install vtk
 It is possible to list all of the versions of `vtk` available on your platform with:
 
 ```
-conda search vtk --channel kmmtest
+conda search vtk --channel klmntest
 ```
 
 
@@ -58,9 +58,9 @@ package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
-`kmmtest` channel, whereupon the built conda packages will be available for
-everybody to install and use from the `kmmtest` channel.
-Note that all branches in the kmmtest/vtk-feedstock are
+`klmntest` channel, whereupon the built conda packages will be available for
+everybody to install and use from the `klmntest` channel.
+Note that all branches in the klmntest/vtk-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

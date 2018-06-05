@@ -1,12 +1,9 @@
 channels:
   targets:
-  - [kmmtest, main]
+  - [klmntest, main]
 travis:
   secure:
     BINSTAR_TOKEN: TfMnwxQjnobqn7iJoR3RLFc7xugqBRFnd0WuFFko3TBIMl4Siu+IG2RDeFjgFDefhJb4IhVEAqIPXCA1izSCrlPnQsJtMl01oW1ZToZy9eAzhzYf9zv/vU2xKMI95GFW8ftWssyriBiht1Ff4kK9hCxWkeNfLlbo3UbSIWzwejNQTQDVT1eKBSv2BvweHDiXMANtdzBJ9QzanmhnVEgOPA5pUakisczTEDUEXcZaNFVsxpl1l/HjXU6uVzjLmTuKExyH670vdpC/o+Y7Xw1eD6d6vkA2t9eqz9h7MrYpx4taX+mbheqdVPm8it4k8Vqg8hyKxeqzzSdI6vHaGnxURgY8QDt2Nt0b2OW7wJHUJEThJU2h+Nj6iiJXhns98l1PR8MzbdXYMTn0IK4OQOXw8UIhqweVm5CPf50OQ2jYmRulph4dYq2Zj8KuSoVhse0xn9jl71g2ZYy0mBdxa9UNX0rN393tMGaAp15AeSHW7trzfVJLKu7h6xbOIqhmq59/hmwVYOXSr0vFthDW8NDvLRA9zYiDgWBZFw4/Y/9QUd5+H8B4sjq6z+cfgahwm6iEgo+Q6UMk4jg/YZJ7NZjgFLwaaC79/jlz24p2C7WXXQbAQmwlfR7JEky7U098kDbng8XsOCwXbGTaFyM+hdUjzK0W1kbVnek92yD1cQfwNX4=
 appveyor:
   secure:
     BINSTAR_TOKEN: pbYCy9O5MqQTd99gz29V26LP7k+s+m2kWRWOaOpPv4Wj3y3P4gmOwETkVo/fuHs0
-
-# provider:
-#     osx: circle
