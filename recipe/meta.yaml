@@ -1,56 +1,21 @@
 package:
   name: "vtk"
-  version: "{{ vtk }}"
-
-source:
-  fn: "VTK-{{ vtk }}.tar.gz"
-  url: "http://www.vtk.org/files/release/{{ vtk_major_minor }}/VTK-{{ vtk }}.tar.gz"
-  md5: {{ vtk_md5 }}
+  version: "8.1.0"
 
 build:
-  number: 1
-  features:
-    - vc14                 # [win and (py35 or py36)]
-    - mesalib              # [VTK_WITH_OSMESA]
-  skip_compile_pyc:
-    - "*/*.py"
-  skip:
-    - True                 # [win and py27]
-    - True                 # [win]
-    - True                 # [linux]
+  number: 0
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - python  {{ python }}
-    - ninja
-    - cmake >=3.6
-    - git
-  host:
-    - future
-    - python {{ python }}
-    - hdf5 1.8.18|1.8.18.*  # [unix]
-    - zlib 1.2.*
-    - setuptools
-    - pkgconfig
-    - mesalib               # [VTK_WITH_OSMESA]
+    - python
+    - pip
 
   run:
-    - python  {{ python }}
-    - future
-    - hdf5 1.8.18|1.8.18.*  # [unix]
-    - numpy <=1.13
-    - pillow
-    - zlib 1.2.*
-    - mesalib               # [VTK_WITH_OSMESA]
+    - python
 
 test:
   requires:
-    - python {{ python }}
-    - numpy <=1.13
-    - pillow
-    - future
+    - python
   imports:
     - vtk
 
@@ -61,8 +26,3 @@ about:
     The Visualization Toolkit (VTK) is an open-source, freely available software
     system for 3D computer graphics, modeling, image processing, volume
     rendering, scientific visualization, and information visualization.
-extra:
-  recipe-maintainers:
-    # GitHub IDs for maintainers of the recipe.
-    - rlizzo
-    - lantiga

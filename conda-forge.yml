@@ -8,5 +8,5 @@ appveyor:
   secure:
     BINSTAR_TOKEN: pbYCy9O5MqQTd99gz29V26LP7k+s+m2kWRWOaOpPv4Wj3y3P4gmOwETkVo/fuHs0
 
-provider:
-    osx: circle
+# provider:
+#     osx: circle
